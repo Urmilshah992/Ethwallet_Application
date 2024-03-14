@@ -16,7 +16,7 @@ contract ethwallet {
 
     function addMonery() external payable returns (uint256) {
         amount += msg.value;
-        return amount;
+        return totalInvesetment[address(msg.sender)] = amount;
     }
 
     function withdraw() external {
