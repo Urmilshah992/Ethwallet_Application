@@ -11,4 +11,9 @@ contract ethwalletTest is Test {
         ethWallet = new ethwallet();
         return (ethWallet);
     }
+
+    function checkownertest() external view {
+        assertEq(address(this).balance, 5 ether);
+        console.log("total remaing balance", address(this).balance);
+    }
 }
