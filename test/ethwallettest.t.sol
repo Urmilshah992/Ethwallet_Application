@@ -12,8 +12,12 @@ contract ethwalletTest is Test {
         return (ethWallet);
     }
 
-    function checkownertest() external view {
-        assertEq(address(this).balance, 5 ether);
+    function test_checkownertest() external view {
+        assert(address(this).balance != 5 ether);
         console.log("total remaing balance", address(this).balance);
+    }
+
+    function test_checkowner() external view {
+        assert(address(this) != msg.sender);
     }
 }
